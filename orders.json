@@ -1,0 +1,11 @@
+{
+    "orders": [
+        {
+            "item": "Apple",
+            "quantity": 10,
+            "price": 100,
+            "buyer": "Saint-Petersburg",
+            "date": "02.07.2020"
+        }
+    ]
+}
