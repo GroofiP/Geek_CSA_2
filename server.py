@@ -30,7 +30,7 @@ def server_start(ip_start="", tcp_start=7777):
         }
         client.send(pickle.dumps(massage))
         client.close()
-
+        print(sys.argv[1])
 
 if __name__ == "__main__":
     print(len(sys.argv))

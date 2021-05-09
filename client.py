@@ -25,7 +25,8 @@ def client_start(ip_start="", tcp_start=7777):
     sock.send(pickle.dumps(massage))
     data = sock.recv(1024)
     data_message = pickle.loads(data)
-    print(f'Сообщение: {data_message["Hello"]}. {data_message["End"]}.')
+    print(f'Сообщение: {data_message["Hello"]}. '
+          f'{data_message["End"]}.')
     sock.close()
 
 
