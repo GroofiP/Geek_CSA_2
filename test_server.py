@@ -5,6 +5,18 @@
 # * Использовал pytest
 from server import server_start
 
+tcp_one = 8888
+tcp_two = 8888
 
-def test_server_start():
-    assert server_start('127.0.0.1', 7777) != ('localhost', 7777), "Неправильный тип данных"
+ip_one = "127.0.0.1"
+ip_two = "127.0.0.1"
+
+
+def test_server_tcp():
+    assert tcp_one == tcp_two, "Неправильный тип данных или проброс другого порта"
+    server_start(tcp_start=tcp_one)
+
+
+def test_server_ip():
+    assert ip_two == ip_one, "Неправильный тип данныхили проброс другого ip"
+    server_start(ip_one)
