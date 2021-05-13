@@ -3,20 +3,18 @@
 # в отдельных скриптах
 # с префиксом test_ в имени файла (например, test_client.py).
 # * Использовал pytest
+from check import check_tcp, check_ip
 from client import client_start
 
-tcp_one = 8888
-tcp_two = 8888
-
+tcp_one = 7777
 ip_one = "127.0.0.1"
-ip_two = "127.0.0.1"
 
 
 def test_server_tcp():
-    assert tcp_one == tcp_two, "Неправильный тип данных или проброс другого порта"
+    assert check_tcp(tcp_one) is True, "Неправильный прописан tcp"
     client_start(tcp_start=tcp_one)
 
 
 def test_server_ip():
-    assert ip_two == ip_one, "Неправильный тип данныхили проброс другого ip"
+    assert check_ip(ip_one) is True, "Неправильный прописан ip"
     client_start(ip_one)
