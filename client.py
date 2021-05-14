@@ -10,10 +10,18 @@
 # параметры командной строки скрипта client.py <addr> [<port>]:
 # addr — ip-адрес сервера;
 # port — tcp-порт на сервере, по умолчанию 7777.
+import logging
+import os
+
+import log.server_log_config
 import pickle
 import sys
 from socket import socket, AF_INET, SOCK_STREAM
 
+logger = logging.getLogger('basic')
+
+logging.basicConfig(
+    filename=os.path.join("log", "app.log"),)
 
 def client_start(ip_start="", tcp_start=7777):
     sock = socket(AF_INET, SOCK_STREAM)
@@ -24,7 +32,11 @@ def client_start(ip_start="", tcp_start=7777):
     sock.send(pickle.dumps(massage))
     data = sock.recv(1024)
     data_message = pickle.loads(data)
-    print(f'Сообщение: {data_message["message"]}')
+    try:
+        logger.info(f'Сообщение: {data_message["message"]}')
+        logger.info(f'Сообщение: Клиент отработал')
+    except Exception as e:
+        logger.info(f'Произошел сбой: {e}')
     sock.close()
 
 

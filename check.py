@@ -1,3 +1,6 @@
+import os
+
+
 def check_ip(str_ip):
     str_ip = str(str_ip)
     list_ip = []
@@ -21,3 +24,10 @@ def check_tcp(str_tcp):
         return False
     else:
         return False
+
+
+def path_log():
+    if os.path.basename(os.getcwd()) == "log":
+        return ""
+    else:
+        return "log"

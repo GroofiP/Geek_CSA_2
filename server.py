@@ -9,9 +9,13 @@
 # имеет параметры командной строки:
 # -p <port> — TCP-порт для работы (по умолчанию использует 7777);
 # -a <addr> — IP-адрес для прослушивания (по умолчанию слушает все доступные адреса).
+import logging
+import log.server_log_config
 import pickle
 import sys
 from socket import socket, AF_INET, SOCK_STREAM
+
+logger = logging.getLogger('basic')
 
 
 def server_start(ip_start="", tcp_start=7777):
@@ -23,11 +27,15 @@ def server_start(ip_start="", tcp_start=7777):
         client, address = sock.accept()
         data = client.recv(1024)
         data_message = pickle.loads(data)
-        print(f'Сообщение: {data_message["message"]}')
+        try:
+            logger.info(f'Сообщение: {data_message["message"]}')
+        except Exception as e:
+            logger.info(f'Произошел сбой: {e}')
         massage = {
             "message": "Привет, клиент",
         }
         client.send(pickle.dumps(massage))
+        logger.info(f'Сообщение: Сервер отработал')
         client.close()
 
 
