@@ -13,8 +13,12 @@
 import pickle
 import sys
 from socket import socket, AF_INET, SOCK_STREAM
+from log.server_log_config import logger
+from dec import logs
+from main import main
 
 
+@logs
 def client_start(ip_start="", tcp_start=7777):
     sock = socket(AF_INET, SOCK_STREAM)
     sock.connect((ip_start, tcp_start))
@@ -24,13 +28,17 @@ def client_start(ip_start="", tcp_start=7777):
     sock.send(pickle.dumps(massage))
     data = sock.recv(1024)
     data_message = pickle.loads(data)
-    print(f'Сообщение: {data_message["message"]}')
+    try:
+        logger.info(f'Сообщение: {data_message["message"]}')
+        logger.info(f'Сообщение: Клиент отработал')
+    except Exception as e:
+        logger.info(f'Произошел сбой: {e}')
     sock.close()
 
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        client_start()
+        main(client_start)
     else:
         argv_1 = sys.argv[1]
         argv_2 = int(sys.argv[2][1:5])
