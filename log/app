@@ -1,23 +1,399 @@
-Серверный модуль логов
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Клиент отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Клиент отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя check и аргументы (),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя None и аргументы (),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя None и аргументы ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя None и аргументы ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя /home/groofi/Work_Git/Geek_CSA_2/check.py и аргументы ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя time и аргументы ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя client_start и аргументы ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777),{}
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции check и аргументы функции
+Сообщение: Имя функции 
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции 
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции 
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции 
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции dec
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции {}
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <function trace at 0x7f22f3f84dc0>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции trace
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции []
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции /home/groofi/Work_Git/Geek_CSA_2/client.py
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции /home/groofi/Work_Git/Geek_CSA_2/client.py
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
 Клиентский модуль логов
-Сообщение: Привет, клиент
-Серверный модуль логов
 Клиентский модуль логов
-Серверный модуль логов
-Сообщение: Привет, сервер
-Сообщение: Привет, клиент
-Сообщение: Привет, сервер
-Сообщение: Привет, клиент
-Серверный модуль логов
-Сообщение: Привет, сервер
+Сообщение: Имя функции /home/groofi/Work_Git/Geek_CSA_2/client.py
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
 Сообщение: Привет, клиент
 Сообщение: Клиент отработал
-Сообщение: Привет, сервер
+Сообщение: Имя функции /home/groofi/Work_Git/Geek_CSA_2/client.py
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
 Сообщение: Привет, клиент
 Сообщение: Клиент отработал
-Сообщение: Привет, сервер
+Сообщение: Имя функции []
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
 Сообщение: Привет, клиент
 Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f87e66a81f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f87e668e500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 24>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f87e66a81f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f87e66a81f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f87e66a81f0>), ('__format__', <built-in method __format__ of function object at 0x7f87e66a81f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f87e66a81f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f87e66a81f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f87e66a81f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f87e66b6700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'logging': <module 'logging' from '/usr/lib/python3.8/logging/__init__.py'>, 'log': <module 'log' from '/home/groofi/Work_Git/Geek_CSA_2/log/__init__.py'>, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logs': <function logs at 0x7f87e6458670>, 'logger': <Logger basic (INFO)>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f87e66a81f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f87e66a81f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f87e66a81f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f87e66a81f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f87e66a81f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f87e66a81f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f87e66a81f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f87e66a81f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f87e66a81f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f87e66a81f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f87e66a81f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f87e66a81f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [FrameInfo(frame=<frame at 0x7fc2f6669be0, file '/home/groofi/Work_Git/Geek_CSA_2/dec.py', line 10, code logs>, filename='/home/groofi/Work_Git/Geek_CSA_2/dec.py', lineno=10, function='logs', code_context=["    logger.info(f'Сообщение: Имя функции {inspect.stack()}')\n"], index=0), FrameInfo(frame=<frame at 0x7fc2f6876840, file '/home/groofi/Work_Git/Geek_CSA_2/client.py', line 25, code <module>>, filename='/home/groofi/Work_Git/Geek_CSA_2/client.py', lineno=25, function='<module>', code_context=['def client_start(ip_start="", tcp_start=7777):\n'], index=0)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции FrameInfo(frame=<frame at 0x7f9476330be0, file '/home/groofi/Work_Git/Geek_CSA_2/dec.py', line 10, code logs>, filename='/home/groofi/Work_Git/Geek_CSA_2/dec.py', lineno=10, function='logs', code_context=["    logger.info(f'Сообщение: Имя функции {inspect.stack()[0]}')\n"], index=0)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <frame at 0x7f4cb0d53be0, file '/home/groofi/Work_Git/Geek_CSA_2/dec.py', line 10, code logs>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <frame at 0x7f3e8a9afbe0, file '/home/groofi/Work_Git/Geek_CSA_2/dec.py', line 10, code logs>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <frame at 0x7f56c286e840, file '/home/groofi/Work_Git/Geek_CSA_2/client.py', line 25, code <module>>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <frame at 0x7fb5755b6840, file '/home/groofi/Work_Git/Geek_CSA_2/client.py', line 25, code <module>>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции b'd\x00d\x01l\x00Z\x00d\x00d\x01l\x01Z\x02d\x00d\x01l\x03Z\x03d\x00d\x01l\x04Z\x04d\x00d\x02l\x05m\x05Z\x05m\x06Z\x06m\x07Z\x07\x01\x00d\x00d\x03l\x08m\tZ\t\x01\x00e\x00\xa0\nd\x04\xa1\x01Z\x0be\td\x0fd\x07d\x08\x84\x01\x83\x01Z\x0cd\td\n\x84\x00Z\re\x0ed\x0bk\x02r\xa8e\x0fe\x04j\x10\x83\x01d\x0ck\x01r~e\r\x83\x00\x01\x00n*e\x04j\x10d\x0c\x19\x00Z\x11e\x12e\x04j\x10d\r\x19\x00d\x0cd\x0e\x85\x02\x19\x00\x83\x01Z\x13e\x0ce\x11e\x13\x83\x02\x01\x00d\x01S\x00'
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции d dl Z d dlZd dlZd dlZd dlmZmZmZ d dlm	Z	 e 
+dZe	dddZd	d
+ Zedkreejdkr~e  n*ejd Zeejd dd Zeee dS 
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции dŤlZdŤŬɚdŤ͚ͬdŤѬњdɤլխ՚٭ٚݭݚdͤ࡬७ग़eઠѤơ୚॥ཤݤࡤƄƃౚ।੤൚๥୤ɫꡲཥѥၪƃ౤ū繲൥⩮ѥၪ౤ᅚብѥၪ൤౤๤ʅƃፚ౥ᅥ፥ʃŤS
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module 'client' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции <module 'client' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции <module 'client' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module 'client' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module 'client' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции <module '__main__' from '/home/groofi/Work_Git/Geek_CSA_2/client.py'>
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f3c3e91e1f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f3c3e904500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 24>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f3c3e91e1f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f3c3e91e1f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f3c3e91e1f0>), ('__format__', <built-in method __format__ of function object at 0x7f3c3e91e1f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f3c3e91e1f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f3c3e91e1f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f3c3e91e1f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f3c3e92c700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'logging': <module 'logging' from '/usr/lib/python3.8/logging/__init__.py'>, 'log': <module 'log' (namespace)>, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logs': <function logs at 0x7f3c3e6ce670>, 'logger': <Logger basic (INFO)>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f3c3e91e1f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f3c3e91e1f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f3c3e91e1f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f3c3e91e1f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f3c3e91e1f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f3c3e91e1f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f3c3e91e1f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f3c3e91e1f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f3c3e91e1f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f3c3e91e1f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f3c3e91e1f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f3c3e91e1f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7fe3da29b1f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7fe3da281500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 22>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7fe3da29b1f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7fe3da29b1f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7fe3da29b1f0>), ('__format__', <built-in method __format__ of function object at 0x7fe3da29b1f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7fe3da29b1f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7fe3da29b1f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7fe3da29b1f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7fe3da2a9700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'logging': <module 'logging' from '/usr/lib/python3.8/logging/__init__.py'>, 'log': <module 'log' (namespace)>, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logs': <function logs at 0x7fe3d9fb9430>, 'logger': <Logger basic (INFO)>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7fe3da29b1f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7fe3da29b1f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7fe3da29b1f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7fe3da29b1f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7fe3da29b1f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7fe3da29b1f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7fe3da29b1f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7fe3da29b1f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7fe3da29b1f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7fe3da29b1f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7fe3da29b1f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7fe3da29b1f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7fc75524c1f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7fc755232500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7fc75524c1f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7fc75524c1f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7fc75524c1f0>), ('__format__', <built-in method __format__ of function object at 0x7fc75524c1f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7fc75524c1f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7fc75524c1f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7fc75524c1f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7fc75525a700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7fc755089310>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7fc75524c1f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7fc75524c1f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7fc75524c1f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7fc75524c1f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7fc75524c1f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7fc75524c1f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7fc75524c1f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7fc75524c1f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7fc75524c1f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7fc75524c1f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7fc75524c1f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7fc75524c1f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f0acbc6e1f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f0acbc54500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f0acbc6e1f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f0acbc6e1f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f0acbc6e1f0>), ('__format__', <built-in method __format__ of function object at 0x7f0acbc6e1f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f0acbc6e1f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f0acbc6e1f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f0acbc6e1f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f0acbc7c700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f0acbaab310>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f0acbc6e1f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f0acbc6e1f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f0acbc6e1f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f0acbc6e1f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f0acbc6e1f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f0acbc6e1f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f0acbc6e1f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f0acbc6e1f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f0acbc6e1f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f0acbc6e1f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f0acbc6e1f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f0acbc6e1f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f1f9e8661f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f1f9e84c500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f1f9e8661f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f1f9e8661f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f1f9e8661f0>), ('__format__', <built-in method __format__ of function object at 0x7f1f9e8661f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f1f9e8661f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f1f9e8661f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f1f9e8661f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f1f9e874700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f1f9e6a3310>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f1f9e8661f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f1f9e8661f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f1f9e8661f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f1f9e8661f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f1f9e8661f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f1f9e8661f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f1f9e8661f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f1f9e8661f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f1f9e8661f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f1f9e8661f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f1f9e8661f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f1f9e8661f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Клиентский модуль логов
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f79678c71f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f79678ad500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f79678c71f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f79678c71f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f79678c71f0>), ('__format__', <built-in method __format__ of function object at 0x7f79678c71f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f79678c71f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f79678c71f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f79678c71f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f79678d5700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f7967704310>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f79678c71f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f79678c71f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f79678c71f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f79678c71f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f79678c71f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f79678c71f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f79678c71f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f79678c71f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f79678c71f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f79678c71f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f79678c71f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f79678c71f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7ffac43e61f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7ffac43cc500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7ffac43e61f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7ffac43e61f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7ffac43e61f0>), ('__format__', <built-in method __format__ of function object at 0x7ffac43e61f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7ffac43e61f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7ffac43e61f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7ffac43e61f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7ffac43f4700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7ffac41053a0>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7ffac43e61f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7ffac43e61f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7ffac43e61f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7ffac43e61f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7ffac43e61f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7ffac43e61f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7ffac43e61f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7ffac43e61f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7ffac43e61f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7ffac43e61f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7ffac43e61f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7ffac43e61f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f0ed90cd1f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f0ed90b3500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f0ed90cd1f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f0ed90cd1f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f0ed90cd1f0>), ('__format__', <built-in method __format__ of function object at 0x7f0ed90cd1f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f0ed90cd1f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f0ed90cd1f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f0ed90cd1f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f0ed90db700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f0ed8dec3a0>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f0ed90cd1f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f0ed90cd1f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f0ed90cd1f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f0ed90cd1f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f0ed90cd1f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f0ed90cd1f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f0ed90cd1f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f0ed90cd1f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f0ed90cd1f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f0ed90cd1f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f0ed90cd1f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f0ed90cd1f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f6a799361f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f6a7991c500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f6a799361f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f6a799361f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f6a799361f0>), ('__format__', <built-in method __format__ of function object at 0x7f6a799361f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f6a799361f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f6a799361f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f6a799361f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f6a79944700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f6a796553a0>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f6a799361f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f6a799361f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f6a799361f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f6a799361f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f6a799361f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f6a799361f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f6a799361f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f6a799361f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f6a799361f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f6a799361f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f6a799361f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f6a799361f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции [('__annotations__', {}), ('__call__', <method-wrapper '__call__' of function object at 0x7f84f55631f0>), ('__class__', <class 'function'>), ('__closure__', None), ('__code__', <code object client_start at 0x7f84f5549500, file "/home/groofi/Work_Git/Geek_CSA_2/client.py", line 20>), ('__defaults__', ('', 7777)), ('__delattr__', <method-wrapper '__delattr__' of function object at 0x7f84f55631f0>), ('__dict__', {}), ('__dir__', <built-in method __dir__ of function object at 0x7f84f55631f0>), ('__doc__', None), ('__eq__', <method-wrapper '__eq__' of function object at 0x7f84f55631f0>), ('__format__', <built-in method __format__ of function object at 0x7f84f55631f0>), ('__ge__', <method-wrapper '__ge__' of function object at 0x7f84f55631f0>), ('__get__', <method-wrapper '__get__' of function object at 0x7f84f55631f0>), ('__getattribute__', <method-wrapper '__getattribute__' of function object at 0x7f84f55631f0>), ('__globals__', {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x7f84f5571700>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/home/groofi/Work_Git/Geek_CSA_2/client.py', '__cached__': None, 'pickle': <module 'pickle' from '/usr/lib/python3.8/pickle.py'>, 'sys': <module 'sys' (built-in)>, 'socket': <class 'socket.socket'>, 'AF_INET': <AddressFamily.AF_INET: 2>, 'SOCK_STREAM': <SocketKind.SOCK_STREAM: 1>, 'logger': <Logger basic (INFO)>, 'logs': <function logs at 0x7f84f52823a0>}), ('__gt__', <method-wrapper '__gt__' of function object at 0x7f84f55631f0>), ('__hash__', <method-wrapper '__hash__' of function object at 0x7f84f55631f0>), ('__init__', <method-wrapper '__init__' of function object at 0x7f84f55631f0>), ('__init_subclass__', <built-in method __init_subclass__ of type object at 0x8fa9c0>), ('__kwdefaults__', None), ('__le__', <method-wrapper '__le__' of function object at 0x7f84f55631f0>), ('__lt__', <method-wrapper '__lt__' of function object at 0x7f84f55631f0>), ('__module__', '__main__'), ('__name__', 'client_start'), ('__ne__', <method-wrapper '__ne__' of function object at 0x7f84f55631f0>), ('__new__', <built-in method __new__ of type object at 0x8fa9c0>), ('__qualname__', 'client_start'), ('__reduce__', <built-in method __reduce__ of function object at 0x7f84f55631f0>), ('__reduce_ex__', <built-in method __reduce_ex__ of function object at 0x7f84f55631f0>), ('__repr__', <method-wrapper '__repr__' of function object at 0x7f84f55631f0>), ('__setattr__', <method-wrapper '__setattr__' of function object at 0x7f84f55631f0>), ('__sizeof__', <built-in method __sizeof__ of function object at 0x7f84f55631f0>), ('__str__', <method-wrapper '__str__' of function object at 0x7f84f55631f0>), ('__subclasshook__', <built-in method __subclasshook__ of type object at 0x8fa9c0>)]
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция calling вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция calling вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция calling вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Сообщение: Имя функции server_start и аргументы функции ()
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, сервер
+Сообщение: Сервер отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7787)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, сервер
+Сообщение: Сервер отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, сервер
+Сообщение: Сервер отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция server_start вызвана из функции main
+Сообщение: Имя функции server_start и аргументы функции ('127.0.0.1', 7777)
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, сервер
+Сообщение: Сервер отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
+Сообщение: Привет, сервер
+Сообщение: Сервер отработал
+Сообщение: Привет, клиент
+Сообщение: Клиент отработал
+Функция client_start вызвана из функции main
+Сообщение: Имя функции client_start и аргументы функции ('127.0.0.1', 7777)
 Сообщение: Привет, сервер
 Сообщение: Сервер отработал
 Сообщение: Привет, клиент

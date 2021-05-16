@@ -12,7 +12,8 @@ logging.basicConfig(
 
 logger = logging.getLogger('basic')
 
-rot_time = TimedRotatingFileHandler(filename=os.path.join(path_log(), "app"), when="H", interval=24, backupCount=3, utc=True)
+rot_time = TimedRotatingFileHandler(filename=os.path.join(path_log(), "app"), when="H", interval=24, backupCount=3,
+                                    utc=True)
 
 logger.addHandler(rot_time)
 
