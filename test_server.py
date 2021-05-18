@@ -12,7 +12,7 @@ ip_one = "127.0.0.1"
 
 def test_server_tcp():
     assert check_tcp(tcp_one) is True, "Неправильный прописан tcp"
-    server_start(tcp_start=tcp_one)
+    server_start(tcp_go=tcp_one)
 
 
 def test_server_ip():

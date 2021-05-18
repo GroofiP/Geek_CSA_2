@@ -13,30 +13,43 @@ from log.server_log_config import logger
 import pickle
 import sys
 from socket import socket, AF_INET, SOCK_STREAM
-
 from dec import logs
-from main import main
+from service import info_log, main
+
+
+def server_to_accept_message(sock_cli):
+    client, address = sock_cli.accept()
+    data = client.recv(1024)
+    data_message = pickle.loads(data)
+    try:
+        logger.info(f'Сообщение от клиента серверу: {data_message["message"]}')
+    except Exception as e:
+        logger.info(f'Произошел сбой: {e}')
+    return client, address
+
+
+def server_connect(ip_start="", tcp_start=7777):
+    sock = socket(AF_INET, SOCK_STREAM)
+    sock.bind((ip_start, tcp_start))
+    sock.listen(5)
+    return sock
+
+
+def server_send(cli_add):
+    massage = {
+        "message": input("Введите сообщение от сервера: "),
+    }
+    cli_add.send(pickle.dumps(massage))
 
 
 @logs
-def server_start(ip_start="", tcp_start=7777):
-    sock = socket(AF_INET, SOCK_STREAM)
-    sock.bind((ip_start, tcp_start))
-    sock.listen(1)
+def server_start(ip_go="", tcp_go=7777):
+    sock = server_connect(ip_go, tcp_go)
 
     while True:
-        client, address = sock.accept()
-        data = client.recv(1024)
-        data_message = pickle.loads(data)
-        try:
-            logger.info(f'Сообщение: {data_message["message"]}')
-        except Exception as e:
-            logger.info(f'Произошел сбой: {e}')
-        massage = {
-            "message": "Привет, клиент",
-        }
-        client.send(pickle.dumps(massage))
-        logger.info(f'Сообщение: Сервер отработал')
+        client, address = server_to_accept_message(sock)
+        server_send(client)
+        info_log("server")
         client.close()
 
 
@@ -51,7 +64,7 @@ if __name__ == "__main__":
         for param in sys.argv:
             if param == "-p":
                 argv_1 = int(sys.argv[2])
-                server_start(tcp_start=argv_1)
+                server_start(tcp_go=argv_1)
             elif param == "-a":
                 argv_1 = sys.argv[2]
-                server_start(ip_start=argv_1)
+                server_start(ip_go=argv_1)
