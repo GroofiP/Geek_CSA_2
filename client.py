@@ -20,11 +20,12 @@ from service import info_log, main
 
 def client_to_accept_message(sock_cli):
     data = sock_cli.recv(1024)
-    dict_message = pickle.loads(data)
+    data_message = pickle.loads(data)
     try:
-        logger.info(f'Сообщение от сервера клиенту: {dict_message["message"]}')
+        logger.info(f'{data_message}')
     except Exception as e:
         logger.info(f'Произошел сбой: {e}')
+    print(f'{data_message}')
 
 
 def client_connect(ip_start="", tcp_start=7777):
@@ -34,9 +35,7 @@ def client_connect(ip_start="", tcp_start=7777):
 
 
 def client_send(sock_cli):
-    message = {
-        "message": input("Введите сообщение от клиента: "),
-    }
+    message = input("Введите сообщение от клиента: ")
     sock_cli.send(pickle.dumps(message))
 
 
@@ -49,10 +48,14 @@ def client_start(ip_go="", tcp_go=7777):
     sock.close()
 
 
-if __name__ == "__main__":
+def start_client_script():
     if len(sys.argv) <= 1:
         main(client_start)
     else:
         argv_1 = sys.argv[1]
-        argv_2 = int(sys.argv[2][1:5])
+        argv_2 = int(sys.argv[2])
         client_start(argv_1, argv_2)
+
+
+if __name__ == "__main__":
+    start_client_script()
