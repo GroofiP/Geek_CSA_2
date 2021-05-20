@@ -28,24 +28,25 @@ def client_to_accept_message(sock_cli):
     print(f'{data_message}')
 
 
-def client_connect(ip_start="", tcp_start=7777):
-    sock = socket(AF_INET, SOCK_STREAM)
+def client_connect(ip_start="", tcp_start=7777, sock=()):
     sock.connect((ip_start, tcp_start))
     return sock
 
 
 def client_send(sock_cli):
-    message = input("Введите сообщение от клиента: ")
+    message = {f"{sock_cli.getsockname()}": input("Введите сообщение от клиента: ")}
+    if message == "":
+        return False
     sock_cli.send(pickle.dumps(message))
 
 
 @logs
 def client_start(ip_go="", tcp_go=7777):
     sock = client_connect(ip_go, tcp_go)
-    client_send(sock)
-    client_to_accept_message(sock)
-    info_log("client")
-    sock.close()
+    while True:
+        client_send(sock)
+        client_to_accept_message(sock)
+        info_log("client")
 
 
 def start_client_script():
@@ -57,5 +58,40 @@ def start_client_script():
         client_start(argv_1, argv_2)
 
 
-if __name__ == "__main__":
-    start_client_script()
+ADDRESS = ('localhost', 7777)
+
+
+def echo_client():
+    # Начиная с Python 3.2 сокеты имеют протокол менеджера контекста
+    # При выходе из оператора with сокет будет автоматически закрыт
+    with socket(AF_INET, SOCK_STREAM) as s:  # Создать сокет TCP
+        client_connect(sock=s)
+        while True:
+            msg = input('Введите сообщение: ')
+            if msg == 'exit':
+                break
+            elif msg == "":
+                data = s.recv(1024).decode('utf-8')
+                print(f'{data}')
+            else:
+                massage = f"Сообщение от {s.getsockname()}: {msg}\n"
+                s.send(massage.encode('utf-8'))  # Отправить!
+                data = s.recv(1024).decode('utf-8')
+                print(f'{data}')
+
+
+def echo_client_main():
+    # Начиная с Python 3.2 сокеты имеют протокол менеджера контекста
+    # При выходе из оператора with сокет будет автоматически закрыт
+    with socket(AF_INET, SOCK_STREAM) as s:  # Создать сокет TCP
+        client_connect(sock=s)
+        while True:
+            msg = input('Введите сообщение: ')
+            if msg == 'exit':
+                break
+            msg = f"Сообщение от {s.getsockname()}: {msg}\n"
+            s.send(msg.encode('utf-8'))  # Отправить!
+
+
+if __name__ == '__main__':
+    echo_client_main()
