@@ -4,7 +4,7 @@
 # с префиксом test_ в имени файла (например, test_client.py).
 # * Использовал pytest
 from check import check_tcp, check_ip
-from client import client_start, client_connect
+from client import client_connect
 
 tcp_one = 7777
 ip_one = "127.0.0.1"

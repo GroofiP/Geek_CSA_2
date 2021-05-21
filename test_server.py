@@ -3,10 +3,8 @@
 # в отдельных скриптах
 # с префиксом test_ в имени файла (например, test_client.py).
 # * Использовал pytest
-from socket import socket, AF_INET, SOCK_STREAM
-
 from check import check_tcp, check_ip
-from server import server_connect, server_to_accept
+from server import server_connect
 
 tcp_one = 7777
 ip_one = "127.0.0.1"
