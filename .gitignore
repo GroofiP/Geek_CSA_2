@@ -5,3 +5,5 @@
 /log/app
 /log/app*
 help.py
+help_client.py
+help_server.py

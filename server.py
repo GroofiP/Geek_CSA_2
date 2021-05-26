@@ -12,6 +12,7 @@
 import argparse
 import pickle
 import select
+from multiprocessing import Process
 from socket import socket, AF_INET, SOCK_STREAM
 from log.server_log_config import logger
 from dec import logs
@@ -38,8 +39,8 @@ def server_to_accept_message(cli_add):
     data_message = pickle.loads(data)
     try:
         logger.info(f'Сообщение от клиента {cli_add.getpeername()}: {data_message}')
-    except Exception as e:
-        logger.info(f'Произошел сбой: {e}')
+    except Exception as err:
+        logger.info(f'Произошел сбой: {err}')
     return f'Сообщение от клиента {cli_add.getpeername()}: {data_message}'
 
 
@@ -126,16 +127,16 @@ def echo_server_select(x_socket, x_cli, func_proc_select):
             r = []
             w = []
             try:
-                r, w, e = select.select(x_cli, x_cli, [], wait)
-            except Exception as e:
-                print(f"Клиент отключился{e}")
+                r, w, er = select.select(x_cli, x_cli, [], wait)
+            except Exception as err:
+                print(f"Клиент отключился{err}")
 
             requests = read_requests(r, x_cli)  # Сохраним запросы клиентов
             if requests:
                 write_responses(requests, w, x_cli, func_proc_select)  # Выполним отправку ответов клиентам
 
 
-def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_2):
+def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_1):
     """Функция для настройки эхо сервера под ключ"""
     clients = []
     sock = server_connect(ip_go, tcp_go)
@@ -143,5 +144,77 @@ def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_2):
     echo_server_select(sock, clients, func_proc)
 
 
+def client_client(sock_cli, base_cli, base_gro):
+    data_message = pickle.loads(sock_cli.recv(1024))
+    if data_message == "П":
+        sock_cli.send(pickle.dumps(str(base_cli)))
+        data = sock_cli.recv(1024)
+        data_message = pickle.loads(data)
+        for k, v in data_message.items():
+            base_cli[int(k)].send(pickle.dumps(v))
+    elif data_message == "Г":
+        sock_cli.send(pickle.dumps(str(base_gro)))
+        data = sock_cli.recv(1024)
+        data_message = pickle.loads(data)
+        try:
+            for k, v in data_message.items():
+                sock_base_gro = base_gro[int(k)]
+                for i in sock_base_gro:
+                    i.send(pickle.dumps(v))
+        except Exception as exp:
+            print(exp)
+            sock_cli.send(pickle.dumps("Группы ещё не созданы"))
+    elif data_message == "ВГ":
+        sock_cli.send(pickle.dumps(str(base_gro)))
+        data = sock_cli.recv(1024)
+        data_message = pickle.loads(data)
+        gro = {data_message: []}
+        print(gro)
+        for k, v in gro.items():
+            print(len(base_gro))
+            if len(base_gro) > 0:
+                for a, b in base_gro.items():
+                    print(a)
+                    if a == k:
+                        base_gro[gro[k]].append(sock_cli)
+                        sock_cli.send(pickle.dumps("Вы вступили в группу"))
+            else:
+                base_gro.update({k: [sock_cli]})
+                print(base_gro)
+                sock_cli.send(pickle.dumps("Вы создали группу"))
+
+
+def server_original(ip_go="", tcp_go=7777):
+    sock = server_connect(ip_go, tcp_go)
+    clients = []
+    base_all_groups = {}
+    while True:
+        try:
+            cli, adr = server_to_accept(sock)
+        except OSError:
+            pass
+        else:
+            print(f"Получен запрос на соединение от {adr}")
+            clients.append(cli)
+        finally:
+            wait = 10
+            r = []
+            w = []
+            try:
+                r, w, er = select.select(clients, clients, [], wait)
+            except Exception as err:
+                print(f"Клиент отключился{err}")
+
+            base_all_client = {a: clients[a] for a in range(len(clients))}
+
+            for s in w:
+                proc = Process(target=client_client, args=(s, base_all_client, base_all_groups))
+                proc.start()
+
+
 if __name__ == "__main__":
-    start_parser(echo_server)
+    try:
+        start_parser(server_original)
+    except Exception as e:
+        print(e)
+        start_parser(server_original())
