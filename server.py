@@ -10,9 +10,10 @@
 # -p <port> — TCP-порт для работы (по умолчанию использует 7777);
 # -a <adr> — IP-адрес для прослушивания (по умолчанию слушает все доступные адреса).
 import argparse
+import multiprocessing
 import pickle
 import select
-from multiprocessing import Process
+from multiprocessing import Process, Queue
 from socket import socket, AF_INET, SOCK_STREAM
 from log.server_log_config import logger
 from dec import logs
@@ -144,50 +145,47 @@ def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_1):
     echo_server_select(sock, clients, func_proc)
 
 
+########################################################################################################################
 def client_client(sock_cli, base_cli, base_gro):
-    data_message = pickle.loads(sock_cli.recv(1024))
-    if data_message == "П":
-        sock_cli.send(pickle.dumps(str(base_cli)))
-        data = sock_cli.recv(1024)
-        data_message = pickle.loads(data)
-        for k, v in data_message.items():
-            base_cli[int(k)].send(pickle.dumps(v))
-    elif data_message == "Г":
-        sock_cli.send(pickle.dumps(str(base_gro)))
-        data = sock_cli.recv(1024)
-        data_message = pickle.loads(data)
-        try:
-            for k, v in data_message.items():
-                sock_base_gro = base_gro[int(k)]
-                for i in sock_base_gro:
-                    i.send(pickle.dumps(v))
-        except Exception as exp:
-            print(exp)
-            sock_cli.send(pickle.dumps("Группы ещё не созданы"))
-    elif data_message == "ВГ":
-        sock_cli.send(pickle.dumps(str(base_gro)))
-        data = sock_cli.recv(1024)
-        data_message = pickle.loads(data)
-        gro = {data_message: []}
-        print(gro)
-        for k, v in gro.items():
-            print(len(base_gro))
-            if len(base_gro) > 0:
-                for a, b in base_gro.items():
-                    print(a)
-                    if a == k:
-                        base_gro[gro[k]].append(sock_cli)
-                        sock_cli.send(pickle.dumps("Вы вступили в группу"))
-            else:
-                base_gro.update({k: [sock_cli]})
-                print(base_gro)
-                sock_cli.send(pickle.dumps("Вы создали группу"))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    data_message = str(data_message).split(":")
+    if int(data_message[0].strip("#")) <= 100:
+        base_cli[data_message[0]].send(pickle.dumps(data_message[1]))
+    elif int(data_message[0].strip("#")) >= 100:
+        for sock_cl in base_gro[data_message[0]]:
+            sock_cl.send(pickle.dumps(str(data_message[1])))
+
+
+def gro_add(sock_cli, base_cli, base_gro):
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    print(data_message.strip("#"))
+    if int(data_message.strip("#")) >= 100:
+        for k, v in base_gro.items():
+            if k == data_message:
+                v.append(sock_cli)
+                base_gro[k] = v
+                print(base_gro, base_cli)
+                break
+        else:
+            base_gro.update({data_message: [sock_cli]})
+            print(base_gro, base_cli)
+
+
+def cli_gro_ori(sock_cli, que, base_cli, base_gro):
+    sock_cli.send(
+        pickle.dumps(str(f"Список клиентов(с #0-99) и групп(с #100): {base_cli}{base_gro}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    que.put(data_message)
 
 
 def server_original(ip_go="", tcp_go=7777):
     sock = server_connect(ip_go, tcp_go)
     clients = []
     base_all_groups = {}
+
     while True:
         try:
             cli, adr = server_to_accept(sock)
@@ -205,11 +203,18 @@ def server_original(ip_go="", tcp_go=7777):
             except Exception as err:
                 print(f"Клиент отключился{err}")
 
-            base_all_client = {a: clients[a] for a in range(len(clients))}
+            base_all_client = {f'#{a}': clients[a] for a in range(len(clients))}
 
             for s in w:
-                proc = Process(target=client_client, args=(s, base_all_client, base_all_groups))
-                proc.start()
+                q = Queue()
+                p = multiprocessing.Process(target=cli_gro_ori, args=(s, q, base_all_client, base_all_groups))
+                p.start()
+                data_message = str(q.get())
+                if data_message == "П":
+                    proc_send = Process(target=client_client, args=(s, base_all_client, base_all_groups))
+                    proc_send.start()
+                else:
+                    gro_add(s, base_all_client, base_all_groups)
 
 
 if __name__ == "__main__":

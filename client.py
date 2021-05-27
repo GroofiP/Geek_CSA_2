@@ -100,54 +100,35 @@ def client_original(ip_go="", tcp_go=7777):
     with socket(AF_INET, SOCK_STREAM) as s:
         s.connect((ip_go, tcp_go))
         while True:
+            data = s.recv(1024)
+            data_message = pickle.loads(data)
+            print(data_message)
             msg = input(
                 'Введите, что вы хотите сделать (П/Отправить сообщение пользователю, '
                 'Г/Отправить группе, ВГ/Вступить в группу)? '
             )
             s.send(pickle.dumps(msg))
             if msg == 'П':
-                data = s.recv(1024)
-                data_message = pickle.loads(data)
-                print(data_message)
                 msg = input(
-                    "Введите номер пользователя # с которым хотите начать беседу: "
+                    "Введите номер пользователя с #0 до #99 с которым хотите начать беседу: "
                 )
-                message = {int(msg): f"{input(f'Введите сообщение пользователю {msg}:')}"}
-                s.send(pickle.dumps(message))
-                data = s.recv(1024)
-                data_message = pickle.loads(data)
-                print(data_message)
+                message = f"{msg}:{input(f'Введите сообщение пользователю {msg}:')}"
+                s.send(pickle.dumps(str(message)))
             elif msg == 'Г':
-                data = s.recv(1024)
-                data_message = pickle.loads(data)
-                print(data_message)
-                if data_message == '{}':
-                    s.send(pickle.dumps("{}"))
-                    data = s.recv(1024)
-                    data_message = pickle.loads(data)
-                    print(data_message)
-                else:
-                    msg = input(
-                        "Введите номер пользователя # с которым хотите начать беседу: "
-                    )
-                    message = {int(msg): f"{input(f'Введите сообщение пользователю {msg}:')}"}
-                    s.send(pickle.dumps(message))
-                    data = s.recv(1024)
-                    data_message = pickle.loads(data)
-                    print(data_message)
+                msg = input(
+                    "Введите номер группы от #100 с которой хотите начать беседу: "
+                )
+                message = f"{msg}:{input(f'Введите сообщение пользователю {msg}:')}"
+                s.send(pickle.dumps(message))
             elif msg == 'ВГ':
-                data = s.recv(1024)
-                data_message = pickle.loads(data)
-                print(data_message)
                 msg = input(
                     "Введите номер группы # которую хотите создать или подключится: "
                 )
                 s.send(pickle.dumps(msg))
-                data = s.recv(1024)
-                data_message = pickle.loads(data)
-                print(data_message)
             else:
                 pass
+            data_message = pickle.loads(s.recv(1024))
+            print(data_message)
 
 
 if __name__ == '__main__':
