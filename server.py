@@ -146,39 +146,33 @@ def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_1):
 
 
 ########################################################################################################################
-def client_client(sock_cli, base_cli, base_gro):
-    data = sock_cli.recv(1024)
-    data_message = pickle.loads(data)
-    data_message = str(data_message).split(":")
-    if int(data_message[0].strip("#")) <= 100:
-        base_cli[data_message[0]].send(pickle.dumps(data_message[1]))
-    elif int(data_message[0].strip("#")) >= 100:
-        for sock_cl in base_gro[data_message[0]]:
-            sock_cl.send(pickle.dumps(str(data_message[1])))
 
-
-def gro_add(sock_cli, base_cli, base_gro):
-    data = sock_cli.recv(1024)
-    data_message = pickle.loads(data)
-    print(data_message.strip("#"))
-    if int(data_message.strip("#")) >= 100:
-        for k, v in base_gro.items():
-            if k == data_message:
-                v.append(sock_cli)
-                base_gro[k] = v
-                print(base_gro, base_cli)
-                break
-        else:
-            base_gro.update({data_message: [sock_cli]})
-            print(base_gro, base_cli)
-
-
-def cli_gro_ori(sock_cli, que, base_cli, base_gro):
+def cli_gro_ori(sock_cli, base_cli, base_gro):
     sock_cli.send(
         pickle.dumps(str(f"Список клиентов(с #0-99) и групп(с #100): {base_cli}{base_gro}")))
     data = sock_cli.recv(1024)
     data_message = pickle.loads(data)
-    que.put(data_message)
+    if data_message[0] == "П":
+        if int(data_message[1].strip("#")) <= 100:
+            base_cli[data_message[1]].send(pickle.dumps(data_message[2]))
+    elif data_message[0] == "Г":
+        if int(data_message[1].strip("#")) >= 100:
+            for sock_cl in base_gro[data_message[1]]:
+                sock_cl.send(pickle.dumps(str(data_message[2])))
+    elif data_message[0] == "ВГ":
+        if int(data_message[1].strip("#")) >= 100:
+            for k, v in base_gro.items():
+                if k == data_message[1]:
+                    v.append(sock_cli)
+                    base_gro.fromkeys(data_message[1], sock_cli)
+                    break
+            else:
+                base_gro.fromkeys(data_message[1], sock_cli)
+
+
+def add_gro(que, base_gro):
+    data_message = str(que.get())
+    base_gro.update({data_message[0]: data_message[1]})
 
 
 def server_original(ip_go="", tcp_go=7777):
@@ -204,17 +198,10 @@ def server_original(ip_go="", tcp_go=7777):
                 print(f"Клиент отключился{err}")
 
             base_all_client = {f'#{a}': clients[a] for a in range(len(clients))}
-
             for s in w:
-                q = Queue()
-                p = multiprocessing.Process(target=cli_gro_ori, args=(s, q, base_all_client, base_all_groups))
+                p = multiprocessing.Process(target=cli_gro_ori, args=(s, base_all_client, base_all_groups))
+                p.daemon = True
                 p.start()
-                data_message = str(q.get())
-                if data_message == "П":
-                    proc_send = Process(target=client_client, args=(s, base_all_client, base_all_groups))
-                    proc_send.start()
-                else:
-                    gro_add(s, base_all_client, base_all_groups)
 
 
 if __name__ == "__main__":

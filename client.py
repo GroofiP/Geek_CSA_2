@@ -103,32 +103,26 @@ def client_original(ip_go="", tcp_go=7777):
             data = s.recv(1024)
             data_message = pickle.loads(data)
             print(data_message)
-            msg = input(
+            msg_1 = input(
                 'Введите, что вы хотите сделать (П/Отправить сообщение пользователю, '
                 'Г/Отправить группе, ВГ/Вступить в группу)? '
             )
-            s.send(pickle.dumps(msg))
-            if msg == 'П':
-                msg = input(
-                    "Введите номер пользователя с #0 до #99 с которым хотите начать беседу: "
-                )
-                message = f"{msg}:{input(f'Введите сообщение пользователю {msg}:')}"
-                s.send(pickle.dumps(str(message)))
-            elif msg == 'Г':
-                msg = input(
-                    "Введите номер группы от #100 с которой хотите начать беседу: "
-                )
-                message = f"{msg}:{input(f'Введите сообщение пользователю {msg}:')}"
+            if msg_1 == 'П':
+                msg_2 = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
+                msg_3 = input(f'Введите сообщение пользователю {msg_2}:')
+                message = [msg_1, msg_2, msg_3]
                 s.send(pickle.dumps(message))
-            elif msg == 'ВГ':
-                msg = input(
-                    "Введите номер группы # которую хотите создать или подключится: "
-                )
-                s.send(pickle.dumps(msg))
+            elif msg_1 == 'Г':
+                msg_2 = input("Введите номер группы от #100 с которой хотите начать беседу: ")
+                msg_3 = input(f'Введите сообщение группе {msg_2}:')
+                message = [msg_1, msg_2, msg_3]
+                s.send(pickle.dumps(message))
+            elif msg_1 == 'ВГ':
+                msg_2 = input("Введите номер группы # которую хотите создать или подключится: ")
+                message = [msg_1, msg_2]
+                s.send(pickle.dumps(message))
             else:
                 pass
-            data_message = pickle.loads(s.recv(1024))
-            print(data_message)
 
 
 if __name__ == '__main__':
