@@ -13,8 +13,10 @@ import argparse
 import multiprocessing
 import pickle
 import select
-from multiprocessing import Process, Queue
+from multiprocessing import Process, Queue, JoinableQueue
 from socket import socket, AF_INET, SOCK_STREAM
+from threading import Thread
+
 from log.server_log_config import logger
 from dec import logs
 from service import info_log
@@ -147,38 +149,60 @@ def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_1):
 
 ########################################################################################################################
 
-def cli_gro_ori(sock_cli, base_cli, base_gro):
-    sock_cli.send(
-        pickle.dumps(str(f"Список клиентов(с #0-99) и групп(с #100): {base_cli}{base_gro}")))
+
+def ser_send_p(sock_cli, base_cli):
+    sock_cli.send(pickle.dumps(str(f"Список клиентов: {base_cli}")))
     data = sock_cli.recv(1024)
     data_message = pickle.loads(data)
-    if data_message[0] == "П":
-        if int(data_message[1].strip("#")) <= 100:
-            base_cli[data_message[1]].send(pickle.dumps(data_message[2]))
-    elif data_message[0] == "Г":
-        if int(data_message[1].strip("#")) >= 100:
-            for sock_cl in base_gro[data_message[1]]:
-                sock_cl.send(pickle.dumps(str(data_message[2])))
-    elif data_message[0] == "ВГ":
-        if int(data_message[1].strip("#")) >= 100:
-            for k, v in base_gro.items():
-                if k == data_message[1]:
-                    v.append(sock_cli)
-                    base_gro.fromkeys(data_message[1], sock_cli)
-                    break
-            else:
-                base_gro.fromkeys(data_message[1], sock_cli)
+    if int(data_message[0].strip("#")) <= 100:
+        base_cli[data_message[0]].send(pickle.dumps(data_message[1]))
 
 
-def add_gro(que, base_gro):
-    data_message = str(que.get())
-    base_gro.update({data_message[0]: data_message[1]})
+def ser_send_g(sock_cli, base_gro):
+    sock_cli.send(pickle.dumps(str(f"Список групп: {base_gro}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if int(data_message[0].strip("#")) >= 100:
+        for sock_cl in base_gro[data_message[0]]:
+            sock_cl.send(pickle.dumps(str(data_message[1])))
+
+
+def ser_add_g(sock_cli, base_gro):
+    sock_cli.send(pickle.dumps(str(f"Список групп: {base_gro}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if int(data_message.strip("#")) >= 100:
+        for k, v in base_gro.items():
+            if k == data_message:
+                for z in v:
+                    if z[0] != sock_cli:
+                        v.append(sock_cli)
+                        base_gro.update({data_message: v})
+                        sock_cli.send(pickle.dumps("Вы успешно добавились в группу"))
+                        break
+        else:
+            base_gro.update({data_message: [sock_cli]})
+            sock_cli.send(pickle.dumps("Вы успешно создали группу"))
+
+
+def ser_run(sock_cli, base_cli, base_gro, func_p, func_g, func_add):
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if data_message == "П":
+        p_send_p = multiprocessing.Process(target=func_p, args=(sock_cli, base_cli))
+        p_send_p.start()
+    elif data_message == "Г":
+        p_send_g = multiprocessing.Process(target=func_g, args=(sock_cli, base_gro))
+        p_send_g.start()
+    elif data_message == "ВГ":
+        p_add_g = Thread(target=func_add, args=(sock_cli, base_gro))
+        p_add_g.start()
 
 
 def server_original(ip_go="", tcp_go=7777):
     sock = server_connect(ip_go, tcp_go)
     clients = []
-    base_all_groups = {}
+    base_group = {}
 
     while True:
         try:
@@ -190,18 +214,18 @@ def server_original(ip_go="", tcp_go=7777):
             clients.append(cli)
         finally:
             wait = 10
-            r = []
             w = []
             try:
-                r, w, er = select.select(clients, clients, [], wait)
+                r, w, er = select.select([], clients, [], wait)
             except Exception as err:
                 print(f"Клиент отключился{err}")
 
             base_all_client = {f'#{a}': clients[a] for a in range(len(clients))}
+
             for s in w:
-                p = multiprocessing.Process(target=cli_gro_ori, args=(s, base_all_client, base_all_groups))
-                p.daemon = True
-                p.start()
+                t_st = Thread(target=ser_run,
+                              args=(s, base_all_client, base_group, ser_send_p, ser_send_g, ser_add_g))
+                t_st.start()
 
 
 if __name__ == "__main__":

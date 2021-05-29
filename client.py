@@ -96,31 +96,49 @@ def echo_client_main(ip_go="", tcp_go=7777):
 
 
 ########################################################################################################################
+def cli_start(sock):
+    msg = input(
+        'Введите, что вы хотите сделать (П/Отправить сообщение пользователю, '
+        'Г/Отправить группе, ВГ/Вступить в группу)? '
+    )
+    sock.send(pickle.dumps(msg))
+    return msg
+
+
+def cli_send_p(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
+    msg_b = input(f'Введите сообщение пользователю {msg_a}:')
+    sock.send(pickle.dumps([msg_a, msg_b]))
+    print(pickle.loads(sock.recv(1024)))
+
+
+def cli_send_g(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
+    msg_b = input(f'Введите сообщение пользователю {msg_a}:')
+    sock.send(pickle.dumps([msg_a, msg_b]))
+    print(pickle.loads(sock.recv(1024)))
+
+
+def cli_add_g(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер группы # которую хотите создать или подключится: ")
+    sock.send(pickle.dumps(msg_a))
+    print(pickle.loads(sock.recv(1024)))
+
+
 def client_original(ip_go="", tcp_go=7777):
     with socket(AF_INET, SOCK_STREAM) as s:
         s.connect((ip_go, tcp_go))
         while True:
-            data = s.recv(1024)
-            data_message = pickle.loads(data)
-            print(data_message)
-            msg_1 = input(
-                'Введите, что вы хотите сделать (П/Отправить сообщение пользователю, '
-                'Г/Отправить группе, ВГ/Вступить в группу)? '
-            )
+            msg_1 = cli_start(s)
             if msg_1 == 'П':
-                msg_2 = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
-                msg_3 = input(f'Введите сообщение пользователю {msg_2}:')
-                message = [msg_1, msg_2, msg_3]
-                s.send(pickle.dumps(message))
+                cli_send_p(s)
             elif msg_1 == 'Г':
-                msg_2 = input("Введите номер группы от #100 с которой хотите начать беседу: ")
-                msg_3 = input(f'Введите сообщение группе {msg_2}:')
-                message = [msg_1, msg_2, msg_3]
-                s.send(pickle.dumps(message))
+                cli_send_g(s)
             elif msg_1 == 'ВГ':
-                msg_2 = input("Введите номер группы # которую хотите создать или подключится: ")
-                message = [msg_1, msg_2]
-                s.send(pickle.dumps(message))
+                cli_add_g(s)
             else:
                 pass
 
