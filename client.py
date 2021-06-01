@@ -95,5 +95,53 @@ def echo_client_main(ip_go="", tcp_go=7777):
             s.send(msg.encode('utf-8'))
 
 
+########################################################################################################################
+def cli_start(sock):
+    msg = input(
+        'Введите, что вы хотите сделать (П/Отправить сообщение пользователю, '
+        'Г/Отправить группе, ВГ/Вступить в группу)? '
+    )
+    sock.send(pickle.dumps(msg))
+    return msg
+
+
+def cli_send_p(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
+    msg_b = input(f'Введите сообщение пользователю {msg_a}:')
+    sock.send(pickle.dumps([msg_a, msg_b]))
+    print(pickle.loads(sock.recv(1024)))
+
+
+def cli_send_g(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер пользователя с #0 до #99 с которым хотите начать беседу: ")
+    msg_b = input(f'Введите сообщение пользователю {msg_a}:')
+    sock.send(pickle.dumps([msg_a, msg_b]))
+    print(pickle.loads(sock.recv(1024)))
+
+
+def cli_add_g(sock):
+    print(pickle.loads(sock.recv(1024)))
+    msg_a = input("Введите номер группы # которую хотите создать или подключится: ")
+    sock.send(pickle.dumps(msg_a))
+    print(pickle.loads(sock.recv(1024)))
+
+
+def client_original(ip_go="", tcp_go=7777):
+    with socket(AF_INET, SOCK_STREAM) as s:
+        s.connect((ip_go, tcp_go))
+        while True:
+            msg_1 = cli_start(s)
+            if msg_1 == 'П':
+                cli_send_p(s)
+            elif msg_1 == 'Г':
+                cli_send_g(s)
+            elif msg_1 == 'ВГ':
+                cli_add_g(s)
+            else:
+                pass
+
+
 if __name__ == '__main__':
-    start_client_parser(echo_client_main)
+    start_client_parser(client_original)

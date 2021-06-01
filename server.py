@@ -10,9 +10,13 @@
 # -p <port> — TCP-порт для работы (по умолчанию использует 7777);
 # -a <adr> — IP-адрес для прослушивания (по умолчанию слушает все доступные адреса).
 import argparse
+import multiprocessing
 import pickle
 import select
+from multiprocessing import Process, Queue, JoinableQueue
 from socket import socket, AF_INET, SOCK_STREAM
+from threading import Thread
+
 from log.server_log_config import logger
 from dec import logs
 from service import info_log
@@ -38,8 +42,8 @@ def server_to_accept_message(cli_add):
     data_message = pickle.loads(data)
     try:
         logger.info(f'Сообщение от клиента {cli_add.getpeername()}: {data_message}')
-    except Exception as e:
-        logger.info(f'Произошел сбой: {e}')
+    except Exception as err:
+        logger.info(f'Произошел сбой: {err}')
     return f'Сообщение от клиента {cli_add.getpeername()}: {data_message}'
 
 
@@ -126,16 +130,16 @@ def echo_server_select(x_socket, x_cli, func_proc_select):
             r = []
             w = []
             try:
-                r, w, e = select.select(x_cli, x_cli, [], wait)
-            except Exception as e:
-                print(f"Клиент отключился{e}")
+                r, w, er = select.select(x_cli, x_cli, [], wait)
+            except Exception as err:
+                print(f"Клиент отключился{err}")
 
             requests = read_requests(r, x_cli)  # Сохраним запросы клиентов
             if requests:
                 write_responses(requests, w, x_cli, func_proc_select)  # Выполним отправку ответов клиентам
 
 
-def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_2):
+def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_1):
     """Функция для настройки эхо сервера под ключ"""
     clients = []
     sock = server_connect(ip_go, tcp_go)
@@ -143,5 +147,90 @@ def echo_server(ip_go="", tcp_go=7777, func_proc=write_responses_ver_2):
     echo_server_select(sock, clients, func_proc)
 
 
+########################################################################################################################
+
+
+def ser_send_p(sock_cli, base_cli):
+    sock_cli.send(pickle.dumps(str(f"Список клиентов: {base_cli}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if int(data_message[0].strip("#")) <= 100:
+        base_cli[data_message[0]].send(pickle.dumps(data_message[1]))
+
+
+def ser_send_g(sock_cli, base_gro):
+    sock_cli.send(pickle.dumps(str(f"Список групп: {base_gro}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if int(data_message[0].strip("#")) >= 100:
+        for sock_cl in base_gro[data_message[0]]:
+            sock_cl.send(pickle.dumps(str(data_message[1])))
+
+
+def ser_add_g(sock_cli, base_gro):
+    sock_cli.send(pickle.dumps(str(f"Список групп: {base_gro}")))
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if int(data_message.strip("#")) >= 100:
+        for k, v in base_gro.items():
+            if k == data_message:
+                for z in v:
+                    if z[0] != sock_cli:
+                        v.append(sock_cli)
+                        base_gro.update({data_message: v})
+                        sock_cli.send(pickle.dumps("Вы успешно добавились в группу"))
+                        break
+        else:
+            base_gro.update({data_message: [sock_cli]})
+            sock_cli.send(pickle.dumps("Вы успешно создали группу"))
+
+
+def ser_run(sock_cli, base_cli, base_gro, func_p, func_g, func_add):
+    data = sock_cli.recv(1024)
+    data_message = pickle.loads(data)
+    if data_message == "П":
+        p_send_p = multiprocessing.Process(target=func_p, args=(sock_cli, base_cli))
+        p_send_p.start()
+    elif data_message == "Г":
+        p_send_g = multiprocessing.Process(target=func_g, args=(sock_cli, base_gro))
+        p_send_g.start()
+    elif data_message == "ВГ":
+        p_add_g = Thread(target=func_add, args=(sock_cli, base_gro))
+        p_add_g.start()
+
+
+def server_original(ip_go="", tcp_go=7777):
+    sock = server_connect(ip_go, tcp_go)
+    clients = []
+    base_group = {}
+
+    while True:
+        try:
+            cli, adr = server_to_accept(sock)
+        except OSError:
+            pass
+        else:
+            print(f"Получен запрос на соединение от {adr}")
+            clients.append(cli)
+        finally:
+            wait = 10
+            w = []
+            try:
+                r, w, er = select.select([], clients, [], wait)
+            except Exception as err:
+                print(f"Клиент отключился{err}")
+
+            base_all_client = {f'#{a}': clients[a] for a in range(len(clients))}
+
+            for s in w:
+                t_st = Thread(target=ser_run,
+                              args=(s, base_all_client, base_group, ser_send_p, ser_send_g, ser_add_g))
+                t_st.start()
+
+
 if __name__ == "__main__":
-    start_parser(echo_server)
+    try:
+        start_parser(server_original)
+    except Exception as e:
+        print(e)
+        start_parser(server_original())
